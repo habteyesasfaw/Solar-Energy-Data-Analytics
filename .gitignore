@@ -30,8 +30,7 @@ reports/
 .idea/
 
 # GitHub Actions workflow artifacts
-.github/workflows/
-*.yml
+
 
 # PyCharm specific
 .idea/
