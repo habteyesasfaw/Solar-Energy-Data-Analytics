@@ -3,10 +3,10 @@ name: Python unit tests  # This is the name of the GitHub Actions workflow
 # This section specifies the events that will trigger the workflow
 on:
   push:
-    branches:
+    main:
       - '**'  # Triggers on push to any branch
   pull_request:
-    branches:
+    main:
       - '**'  # Triggers on pull requests to any branch
  
 # This section defines the job that will be executed as part of the workflow
