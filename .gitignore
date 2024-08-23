@@ -29,9 +29,6 @@ reports/
 .vscode/
 .idea/
 
-# GitHub Actions workflow artifacts
-
-
 # PyCharm specific
 .idea/
 

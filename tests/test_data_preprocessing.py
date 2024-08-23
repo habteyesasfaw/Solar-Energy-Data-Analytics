@@ -1,7 +1,6 @@
 import unittest
 import pandas as pd
 import numpy as np
-import os
 
 class TestDataPreprocessing(unittest.TestCase):
 
@@ -44,15 +43,19 @@ class TestDataPreprocessing(unittest.TestCase):
         # Print RH values before clipping for debugging
         print("RH values before clipping:", self.raw_data['RH'].tolist())
         
-        # Apply clipping to RH values
-        self.raw_data['RH'] = np.clip(self.raw_data['RH'], 0, 100)
+        # Apply clipping to RH values while preserving NaN values
+        self.raw_data['RH'] = self.raw_data['RH'].clip(lower=0, upper=100)
         
         # Print RH values after clipping for debugging
         print("RH values after clipping:", self.raw_data['RH'].tolist())
         
-        # Assert that RH values are within the expected range
-        self.assertTrue((self.raw_data['RH'] <= 100).all(), "RH values exceed 100 after clipping")
-        self.assertTrue((self.raw_data['RH'] >= 0).all(), "RH values are below 0 after clipping")
+        # Extract the clipped RH values
+        clipped_rh_values = self.raw_data['RH']
+        
+        # Verify all non-NaN RH values are within the valid range (0-100)
+        valid_rh_values = clipped_rh_values[~clipped_rh_values.isna()]  # Exclude NaNs
+        self.assertTrue((valid_rh_values <= 100).all(), "RH values exceed 100 after clipping")
+        self.assertTrue((valid_rh_values >= 0).all(), "RH values are below 0 after clipping")
 
 if __name__ == '__main__':
     unittest.main()
