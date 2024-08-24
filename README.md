@@ -17,8 +17,6 @@ This project involves a thorough analysis of solar energy data from three locati
 # Project Structure
 The project is organized into the following directories and files:
 
-plaintext
-Copy code
 solar-energy-data/
 ├── .vscode/
 │   └── settings.json
@@ -40,8 +38,10 @@ solar-energy-data/
 ├── README.md  # Project documentation
 ├── requirements.txt  # Python dependencies for the project
 └── .gitignore  # Files and directories to be ignored by Git
+ 
 
-# Datasets
+
+# Datasets 
 
 ### The datasets used in this project are stored in the data/ directory and include:
 
@@ -93,7 +93,7 @@ The project includes several key analyses and visualizations:
 ### Z-Score Analysis: Identify data points significantly different from the mean.
 ### Bubble Charts: Explore complex relationships between variables with bubble charts, e.g., GHI vs. Tamb vs. WS, with bubble size representing RH or BP.
 Running the Streamlit App
-To interactively explore the data and visualizations, run the Streamlit app:
+=>To interactively explore the data and visualizations, run the Streamlit app:
 
 Navigate to the project’s root directory.
 
