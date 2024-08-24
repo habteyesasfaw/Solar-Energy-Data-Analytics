@@ -1,4 +1,5 @@
 Solar Energy Data Analysis
+
 This project is designed to analyze solar energy data from various locations in Benin, Sierra Leone, and Togo. The objective is to provide insights into solar radiation trends, temperature correlations, wind patterns, and overall data quality, to assist MoonLight Energy Solutions in optimizing their solar energy strategies.
 
 Table of Contents
